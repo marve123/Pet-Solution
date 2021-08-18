@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* section{
+            padding: 30px;
+        }
+        input{
+            margin-bottom: 15px;
+            width: 250px;
+        }
+#inner{
+    display: flex;
+}
+        #outer{
+            list-style: none;
+           visibility: hidden;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <section style="height: 790px">
+
+<div class="full-body header" id="full-body" style="
+width: 1050px;
+height: 100vh;
+background-color: rgba(128, 128, 128, 0.178);
+z-index: 900;
+padding: 190px;
+padding-top: 50px;
+padding-bottom: 50px;
+display: none;
+visibility: hidden;
+">
+  
+    <div class="body" style="
+    width: 100%;
+    height: 100%;
+    background-color: rgb(248, 233, 233);
+    ">
+        This is a modal
+    </div>
+</div>
+
+<button id="btn" onclick="modalAppear()" style="
+z-index: -1;
+">
+    Click me
+</button>
+</section>
+
+<script>
+function modalAppear() {
+    var body;
+   var button;
+    body = document.getElementsById('full-body');
+    body.style.visibility = "visible";
+    body.style.display = "block";
+}
+</script>
+
+
+ -->
+<section>
+    <input type="text" id="text">
+    <button onclick="submit()">Submit</button>
+   <p>Mary</p>
+   <p>Janet</p>
+   <p>Zarah</p>
+  <p id="demo"></p>
+</section>
+
+
+<script>
+function submit(){
+    var main;
+    main = document.querySelector("section");
+    var text;
+    var myArray = [];
+    var demo;
+         myArray[0] = text;
+      
+   
+    text = document.getElementById('text').value;
+   var para;
+   para = document.createElement("P");
+   paraAtt = document.createAttribute("id")
+paraAtt.value = "demo2";
+para.setAttributeNode(att);
+main.appendChild(para);
+localStorage.setItem("myLocalStorage", JSON.stringify(text));
+const myLocalData = JSON.parse(localStorage.getItem("myLocalStorage"));
+console.log(myLocalData); 
+
+    para.innerText = myLocalData;
+
+}
+
+</script>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<section style="padding: 100px;">
+<form action="">
+    <div style="margin: 30px;">
+        <input type="text"  id="submit">
+    </div>
+    <div style="display: flex; margin: 30px;">
+        <input type="text" id="amount"> 
+        <button style="margin-left: 30px;">Add</button>
+         <button style="margin-left: 30px;">Sub</button>
+    </div>
+    <div style="margin: 30px;">
+        <input type="email" id="email">
+    </div>
+    <div style="margin: 30px;">
+<button>
+    Get Point
+</button>
+    </div>
+    <div>
+        <p id="demo" style="margin: 20px; font-size: 50px; margin-left: 30px;">
+            25
+        </p>
+    </div>
+</form>                                          
+
+</section>
+
+<script>
+// document.addEventListener(onkeyup(13), function(){
+//     alert('confirmed');
+// })
+var sub;
+sub = document.getElementById('demo');
+// sub.addEventListener("onkeyup(13)", function(){ alert("Confirmed!"); });
+document.addEventListener('keyup', function(){
+    if(event.code == event.ctrlKey){
+        alert('working');
+    }
+});
+
+
+</script>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<button >Answer</button>  -->
+
+    <!-- <div>
+        <p>names</p>
+        <section>
+        <ul id="outer">
+          <li id="inner"> <div></div> <div><p>billy</p></div>  <button>+</button>  </li>
+          <li id="inner"> <div></div> <p>dave</p>   <button>+</button> </li>
+          <li id="inner"> <div></div> <p>agena</p>  <button>+</button>  </li>
+          <li id="inner">  <p>zenca</p>   <button>+</button> </li>
+          <li id="inner">  <p>arine</p>  <button>+</button>  </li>
+          <li id="inner">  <p>ritare</p> <button>+</button>  </li>
+          <li id="inner">  <p>narine</p>  <button>+</button> </li>
+          <li id="inner">  <p>ritanay</p>  <button>+</button> </li>
+        </ul>
+    </section>
+    </div>
+</section>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ <section>
+<input type="text" id="name" placeholder="name">
+
+<input type="tel" id="tel" placeholder="tel">
+
+<input type="date" id="date" placeholder="date">
+
+<select name="day" id="day" aria-placeholder="day">
+    <option value="">Select a day</option>
+<option value="">Mon</option>
+<option value="">Wed</option>
+<option value="">Fri</option>
+</select>
+<button type="submit" onclick="submit()">Submit</button>
+</section>
+
+
+<section>
+    <p>Name: <span id="nameSpace"></span></p>
+    <p>Tel:  <span id="telSpace"></span></p>
+    <p>Date: <span id="dateSpace"></span></p>
+    <p>Day: <span id="daySpace"></span></p>
+</section>
+ 
+
+
+
+<script>
+
+function submit() {
+var name;
+var tel;
+var date;
+var day;
+var nameSpace;
+var telSpace;
+var dateSpace;
+var daySpace
+var array= [];  
+name = document.getElementById('name').value;
+tel = document.getElementById('tel').value;
+date = document.getElementById('date').value;
+day = document.getElementById('day').value;
+nameSpace = document.getElementById('nameSpace');
+telSpace = document.getElementById('telSpace');
+dateSpace = document.getElementById('dateSpace');
+daySpace = document.getElementById('daySpace');
+array[0] = name;   
+array[1] = tel;
+array[2] = date;
+array[3] = day;
+nameSpace.innerHTML =array[0];
+ telSpace.innerHTML = array[1];
+ dateSpace.innerHTML =array[2];
+ daySpace.innerHTML = array[3];
+localStorage.setItem("myLocalStorage", JSON.stringify(array));
+const myLocalData = JSON.parse(localStorage.getItem("myLocalStorage"));
+console.log(myLocalData); 
+}
+
+</script> -->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script>
+  
+        function myFunction() {
+            input = document.getElementById("myInput");
+            
+        var input, filter, divOutside, divInner, p, i, txtValue;
+        filter = input.value.toUpperCase();
+        divOutside = document.getElementById("outer");
+        divInner = divOutside.getElementsByTagName("li");
+        for (i = 0; i < divInner.length; i++) {
+            p = divInner[i].getElementsByTagName("p")[0];
+            txtValue = p.textContent || p.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                divInner[i].style.display = "";
+            } else {
+                divInner[i].style.display = "none";
+            }
+        }
+
+        if(input.value < 1){
+            divOutside.style.visibility = 'hidden'
+        }else{
+            divOutside.style.visibility = 'visible'
+        }
+    }
+
+  
+    </script> -->
+</body>
+</html>
